@@ -2,25 +2,35 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2018",
+      "scripthost"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
+    "noImplicitReturns": true,
+    "outDir": "./dist/out-tsc",
+    "plugins": [
+      {
+        "name": "@angular/language-service"
+      }
     ],
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "sourceMap": true,
+		"strict": true,
+    "target": "es2015"
   },
   "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true,
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   }
 }
